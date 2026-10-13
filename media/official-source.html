@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <meta name="facebook-domain-verification" content="8jqje77kyvnwqldvw89oa2wktl2a3s" />
+    
+    <title>Kamancha Restaurant | Yerevan</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        :root {
+            --bg-color: #F5E8C7;
+            --text-color: #4A3C31;
+            --accent-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --header-bg: rgba(139, 69, 19, 0.85);
+            --card-bg: rgba(245, 232, 199, 0.95);
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #2D2D2D;
+            --text-color: #F5E8C7;
+            --accent-color: #A0522D;
+            --secondary-color: #D2B48C;
+            --header-bg: rgba(45, 45, 45, 0.85);
+            --card-bg: rgba(45, 45, 45, 0.95);
+            --shadow-color: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background: var(--bg-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                    radial-gradient(circle at 20% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        h1, h2 {
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== HEADER & NAV ========== */
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 2rem;
+            background: var(--header-bg);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(245, 232, 199, 0.2);
+        }
+
+        .main-header.scrolled {
+            background: rgba(139, 69, 19, 0.95);
+            padding: 0.8rem 2rem;
+            box-shadow: 0 4px 30px var(--shadow-color);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: #F5E8C7;
+            position: relative;
+            padding: 0.5rem 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--secondary-color), #FFD700);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 4px rgba(210, 180, 140, 0.2);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            z-index: 1001;
+        }
+
+        .language-bar {
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-bar a {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            background: var(--card-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .language-bar a:hover {
+            color: #FFD700;
+            background: rgba(245, 232, 199, 0.3);
+        }
+
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-switch {
+            display: none;
+        }
+
+        .dark-mode-label {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode-label:hover {
+            color: #FFD700;
+        }
+
+        .staff-login-btn {
+            background: var(--accent-color);
+            color: #F5E8C7;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .staff-login-btn:hover {
+            background: #A0522D;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            color: #F5E8C7;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 0;
+            background: url("images/img9.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 100%;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,1);
+            animation: fadeInDown 1s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+            color: #F5E8C7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-btn {
+            background: var(--accent-color);
+            color: #F5E8C7;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            background: #A0522D;
+            transform: scale(1.07) translateY(-2px);
+            box-shadow: 0 6px 18px var(--shadow-color);
+        }
+
+        .hero-btn.view-menu {
+            background: transparent;
+            border: 1px solid #F5E8C7;
+        }
+
+        .hero-btn.view-menu:hover {
+            background: rgba(245, 232, 199, 0.1);
+        }
+
+        /* ========== GALLERY & VIDEO SECTIONS ========== */
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .gallery, .video-library {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .gallery-item, .video-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px var(--shadow-color);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+            background: rgba(245, 232, 199, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            height: 300px;
+        }
+
+        .gallery-item:hover, .video-item:hover {
+            transform: scale(1.04) translateY(-6px);
+            box-shadow: 0 12px 32px var(--shadow-color);
+            border-color: var(--secondary-color);
+        }
+
+        .gallery img,
+        .video-library video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            opacity: 1;
+            transform: none;
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+
+        .gallery img:hover,
+        .video-library video:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 24px rgba(139, 69, 19, 0.2);
+        }
+
+        /* ========== CONTACT SECTION ========== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: rgba(139, 69, 19, 0.8);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(245, 232, 199, 0.2);
+            box-shadow: 0 8px 32px var(--shadow-color);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2.5rem;
+            background: rgba(245, 232, 199, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(245, 232, 199, 0.2);
+            height: 100%;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 2.5rem;
+            font-size: 2.8rem;
+            text-align: left;
+            color: #F5E8C7;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 1.8rem;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.3rem 0;
+            color: #F5E8C7;
+        }
+
+        .contact-info a {
+            color: #F5E8C7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.3rem 0;
+            font-size: 1.4rem;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .contact-info a i {
+            font-size: 1.6rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        .contact-info img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .map-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+
+        .map-container {
+            flex: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            border: 1px solid rgba(245, 232, 199, 0.2);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .directions-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-color), #A0522D);
+            color: #F5E8C7;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+            width: 100%;
+        }
+
+        .directions-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 69, 19, 0.4);
+        }
+
+        .directions-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: rgba(139, 69, 19, 0.95);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(245, 232, 199, 0.2);
+        }
+
+        footer p {
+            color: #F5E8C7;
+        }
+
+        .footer-icons {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(245, 232, 199, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(245, 232, 199, 0.2);
+        }
+
+        .footer-icons a:hover {
+            background: rgba(210, 180, 140, 0.2);
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .footer-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeScaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero h1 {
+            animation: fadeInDown 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-buttons {
+            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-btn, .menu-btn {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+        }
+        .hero-btn:hover, .menu-btn:hover {
+            transform: scale(1.07) translateY(-2px);
+            box-shadow: 0 6px 18px var(--shadow-color);
+        }
+        .gallery-item, .video-item {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+        }
+        .gallery-item:hover, .video-item:hover {
+            transform: scale(1.04) translateY(-6px);
+            box-shadow: 0 12px 32px var(--shadow-color);
+        }
+        @keyframes fadeInPopup {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .reservation-form {
+            animation: fadeInPopup 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .map-section {
+                order: -1;
+            }
+
+            .map-container {
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .hero-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .contact-container {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                padding: 2rem;
+            }
+
+            .contact-info h2 {
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .contact-info p,
+            .contact-info a {
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-info a i {
+                font-size: 1.4rem;
+            }
+
+            .contact-info img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .gallery, .video-library {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-item, .video-item {
+                height: 250px;
+            }
+
+            .map-container {
+                min-height: 300px;
+            }
+
+            .header-right {
+                flex-direction: row;
+                gap: 0.5rem;
+                right: 10px;
+            }
+
+            .language-bar a {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .dark-mode-label {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-header {
+                padding: 0.7rem 0.5rem;
+            }
+            .header-right {
+                right: 2px;
+                top: 2px;
+                gap: 0.2rem;
+            }
+            section {
+                padding: 1rem 0.2rem;
+            }
+            h1, h2 {
+                font-size: 1.3rem !important;
+            }
+            .hero h1 {
+                font-size: 2rem !important;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .hero-btn {
+                width: 100%;
+                font-size: 1rem;
+                padding: 0.7rem 0.5rem;
+            }
+            .about-container,
+            .menu-container {
+                padding: 0.5rem;
+                border-radius: 10px;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .feature-item img {
+                height: 100px;
+            }
+            .gallery, .video-library {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .gallery-item, .video-item {
+                height: 150px;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 0.5rem;
+                border-radius: 10px;
+            }
+            .contact-info {
+                padding: 0.5rem;
+            }
+            .map-container {
+                min-height: 180px;
+            }
+            .reservation-form {
+                padding: 0.5rem;
+                width: 98vw;
+                max-width: 98vw;
+                left: 1vw;
+                top: 2vh;
+                transform: none;
+                border-radius: 10px;
+                font-size: 1rem;
+            }
+            .reservation-form h2 {
+                font-size: 1.2rem;
+            }
+            .form-group input,
+            .form-group input[type="datetime-local"] {
+                font-size: 1rem;
+                padding: 0.4rem;
+            }
+            .submit-btn {
+                width: 100%;
+                font-size: 1rem;
+                padding: 0.7rem 0.5rem;
+            }
+            .close-btn {
+                font-size: 1.2rem;
+                top: 5px;
+                right: 5px;
+            }
+            footer {
+                padding: 1.5rem 0.2rem;
+            }
+            .footer-icons a {
+                width: 32px;
+                height: 32px;
+            }
+            .footer-icons img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        /* ========== ABOUT & MENU SECTIONS ========== */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            border: 1px solid rgba(139, 69, 19, 0.15);
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            height: 100%;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(245, 232, 199, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            border: 1px solid rgba(139, 69, 19, 0.15);
+        }
+
+        .menu-content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .menu-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, var(--accent-color), #A0522D);
+            color: #F5E8C7;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 69, 19, 0.4);
+        }
+
+        @media (max-width: 1024px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-item img {
+                aspect-ratio: 1 / 1;
+                height: auto;
+                max-width: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-container,
+            .menu-container {
+                padding: 1.5rem;
+            }
+
+            .about-content h2,
+            .menu-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-content p,
+            .menu-content p {
+                font-size: 1.1rem;
+            }
+
+            .feature-item {
+                padding: 0.8rem;
+            }
+
+            .feature-item img {
+                aspect-ratio: 1 / 1;
+                height: auto;
+                max-width: 160px;
+            }
+        }
+
+        /* ========== RESERVATION FORM STYLES ========== */
+        .reservation-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            z-index: 1001;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .reservation-form h2 {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .submit-btn {
+            background: var(--accent-color);
+            color: #F5E8C7;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #A0522D;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* Add to the style section for beautifying date/time fields */
+        .form-group input[type="date"], .form-group input[type="time"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Add phone input placeholder and pattern */
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            padding-left: 40px;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/><path fill-rule="evenodd" d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zM8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10z"/></svg>');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+        }
+
+        .flatpickr-time input {
+            pointer-events: none;
+            caret-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<!-- HEADER WITH NAV -->
+<header class="main-header">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#videos">Video Library</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="header-right">
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeSwitch" class="dark-mode-switch" onchange="toggleDarkMode()">
+            <label for="darkModeSwitch" class="dark-mode-label">
+                <i class="fas fa-sun"></i>
+            </label>
+        </div>
+        <div class="language-bar">
+            <a href="#" onclick="changeLanguage('en')">EN</a>
+            <a href="#" onclick="changeLanguage('ru')">RU</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 id="hero-title">Kamancha: The taste and the sound of Armenia</h1>
+    <div class="hero-buttons">
+        <!--<button class="hero-btn" onclick="showReservationForm()">Reserve a Table</button>-->
+        <button class="hero-btn view-menu"  onclick="location.href='https://kamancharest.com/menu/Kamanchamenu.pdf'" id="menu-btn-text" >View Menu</button>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <div class="about-container">
+        <div class="about-content">
+            <p id="about-text">
+               Armat Gastro Group LLC |  Discover authentic Armenian flavors, live music, and warm hospitality at Kamancha Restaurant—right in the heart of Yerevan.
+            </p>
+            <h2 id="about-heading">About Us</h2>
+            <div class="about-features">
+                <div class="feature-item">
+                    <img src="images/location.jpg" alt="Location">
+                    <h3 id="feature1-title">Located on Tumanyan Street</h3>
+                    <p id="feature1-text">Kamancha is where Armenian culinary traditions meet cultural performance.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/music.jpg" alt="Live Music">
+                    <h3 id="feature2-title">Daily Live Music (starting 19:30)</h3>
+                    <p id="feature2-text">Enjoy freshly baked lavash from a traditional tonir oven while listening to live Armenian music every evening.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/interior.jpg" alt="Interior">
+                    <h3 id="feature3-title">Traditional Interiors with Cultural Motifs</h3>
+                    <p id="feature3-text">Immerse yourself in an authentic Armenian atmosphere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu">
+    <div class="menu-container">
+        <div class="menu-content">
+            <h2 id="menu-heading">Menu</h2>
+            <a href="menu/Kamanchamenu.pdf" target="_blank" class="menu-btn" id="menu-btn-text">
+                View Menu
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="photos">
+    <h2 id="gallery-heading">Photos</h2>
+    <div class="gallery">
+        <div class="gallery-item hidden">
+            <img src="images/img1.jpg" alt="Photo 1" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img2.jpg" alt="Photo 2" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img3.jpg" alt="Photo 3" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img4.jpg" alt="Photo 4" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img5.jpg" alt="Photo 5" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img6.jpg" alt="Photo 6" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img7.jpg" alt="Photo 7" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img8.jpg" alt="Photo 8" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img9.jpg" alt="Photo 9" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img10.jpg" alt="Photo 10" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img11.jpg" alt="Photo 11" loading="lazy">
+        </div>
+        <div class="gallery-item hidden">
+            <img src="images/img12.jpg" alt="Photo 12" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO LIBRARY SECTION -->
+<section id="videos">
+    <h2 id="video-heading">Video Library</h2>
+    <div class="video-library">
+        <div class="video-item hidden">
+            <video controls src="videos/video1.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video2.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video3.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video4.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video5.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video6.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video7.mp4" loading="lazy"></video>
+        </div>
+        <div class="video-item hidden">
+            <video controls src="videos/video8.mp4" loading="lazy"></video>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section id="contact">
+    <h2 id="contact-heading">Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div>
+                <h2 id="get-in-touch">Get in Touch</h2>
+                <p>📍 <span id="location-text">Tumanyan Street, Yerevan</span></p>
+                <p>🕰️ <span id="hours-text">Open Daily: 11:00 – 23:00</span></p>
+                <p>
+                    <a href="tel:+37495711700">
+                        <i class="fas fa-phone"></i>
+                        <span id="phone-text">+37495 711700</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:contact@kamancharest.com">
+                        <i class="fas fa-envelope"></i>
+                        <span id="email-text">kamancharest@gmail.com</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://wa.me/37495711700" target="_blank">
+                        <img src="whatsapp-color-svgrepo-com.svg" alt="WhatsApp Icon">
+                        <span id="whatsapp-text">Send Message</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="map-section">
+            <div class="map-container">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.329787693247!2d44.51531531516771!3d40.18141147939462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcf6b3b6e5b7%3A0x5f5f5f5f5f5f5f5f!2sTumanyan%20St%2C%20Yerevan%2C%20Armenia!5e0!3m2!1sen!2sus!4v1600000000000"
+                        allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=40.18141147939462,44.51531531516771" target="_blank" class="directions-btn">
+                <i class="fas fa-directions"></i>
+                <span id="directions-text">Get Directions</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p id="footer-text">Armat Gastro Group LLC | Kamancha Restaurant © 2025 | Yerevan, Armenia</p>
+    <div class="footer-icons">
+        <a href="https://www.instagram.com/kamancha_yerevan/" target="_blank" aria-label="Instagram">
+            <img src="instagram-1-svgrepo-com.svg" alt="Instagram Icon">
+        </a>
+        <a href="https://www.facebook.com/kamancharest" target="_blank" aria-label="Facebook">
+            <img src="facebook-color-svgrepo-com.svg" alt="Facebook Icon">
+        </a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g293932-d27741040-Reviews-Kamancha_Yerevan-Yerevan.html" target="_blank" aria-label="TripAdvisor">
+            <img src="tripadvisor-icon.svg" alt="TripAdvisor Icon">
+        </a>
+    </div>
+</footer>
+
+<!-- RESERVATION FORM -->
+<div id="reservationForm" class="reservation-form">
+    <button class="close-btn" onclick="hideReservationForm()" aria-label="Close">×</button>
+    <h2 id="reservation-title">Make a Reservation</h2>
+    <div id="reservationSuccessMsg" style="display:none; color: green; font-weight: 500; margin-bottom: 1rem;"></div>
+    <form id="reservationFormContent">
+        <div class="form-group">
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" required placeholder="+CountryCodeNumber (e.g. +(374)01234567 or +1 5551234567)" pattern="\+\d{1,3}\s?\d{6,14}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        <!-- <div class="form-group">
+            <label for="datetime">Date & Time</label>
+            <input type="datetime-local" id="datetime" required>
+        </div> -->
+        <div class="form-group">
+            <label for="datetime">Date & Time</label>
+            <input id="datetime" type="text" readonly required>
+        </div>
+        <div class="form-group">
+            <label for="guestQty">Number of Guests</label>
+            <input type="number" id="guestQty" min="1" required>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-button">Submit Reservation</button>
+    </form>
+    <div id="rezx-note" style="margin-top: 1.2rem; color: #888; font-size: 0.95rem; text-align: center;"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- SCRIPTS -->
+<script>
+    let reservations = [];
+    let isStaffLoggedIn = false;
+    let currentLanguage = 'en';
+
+    ///// here we have working hours ////
+    let timeFrom = '10:00';
+    let timeTo = '23:59';
+
+    const translations = {
+        en: {
+            'hero-title': 'Kamancha: Taste the Music of Armenia',
+            'about-text': 'Discover authentic Armenian flavors, live music, and warm hospitality at Kamancha Restaurant—right in the heart of Yerevan.',
+            'about-heading': 'About Us',
+            'feature1-title': 'Located on Tumanyan Street',
+            'feature1-text': 'Kamancha is where Armenian culinary traditions meet cultural performance.',
+            'feature2-title': 'Daily Live Music (starting 19:30)',
+            'feature2-text': 'Enjoy freshly baked lavash from a traditional tonir oven while listening to live Armenian music every evening.',
+            'feature3-title': 'Traditional Interiors with Cultural Motifs',
+            'feature3-text': 'Immerse yourself in an authentic Armenian atmosphere.',
+            'menu-heading': 'Menu',
+            'menu-btn-text': 'View Menu',
+            'gallery-heading': 'Photos',
+            'video-heading': 'Video Library',
+            'contact-heading': 'Contact Us',
+            'get-in-touch': 'Get in Touch',
+            'location-text': 'Tumanyan Street, Yerevan',
+            'hours-text': 'Open Daily: 11:00 – 23:00',
+            'phone-text': '0 95711700',
+            'email-text': 'kamancharest@gmail.com',
+            'whatsapp-text': 'Send Message',
+            'directions-text': 'Get Directions',
+            'footer-text': 'Kamancha Restaurant © 2025 | Yerevan, Armenia',
+            'reservation-title': 'Make a Reservation',
+            'reservation-success': 'Reservation requested! The restaurant will inform you about acceptance or denial.',
+            'login-error': 'Invalid credentials',
+            'rezx-note': 'The reservation process is managed by Rezx CRM.'
+        },
+        ru: {
+            'hero-title': 'Каманча: Вкус Музыки Армении',
+            'about-text': 'Armat Gastro Group LLC | Откройте подлинные армянские вкусы, живую музыку и теплый прием в ресторане Каманча — прямо в сердце Еревана.',
+            'about-heading': 'О нас',
+            'feature1-title': 'Расположен на улице Туманяна',
+            'feature1-text': 'Каманча — место, где армянские кулинарные традиции встречаются с культурными выступлениями.',
+            'feature2-title': 'Живая музыка каждый день (с 19:30)',
+            'feature2-text': 'Наслаждайтесь свежеспеченным лавашом из традиционной печи тоннир под живую армянскую музыку каждую вечер.',
+            'feature3-title': 'Традиционные интерьеры с культурными мотивами',
+            'feature3-text': 'Погрузитесь в аутентичную армянскую атмосферу.',
+            'menu-heading': 'Меню',
+            'menu-btn-text': 'Посмотреть меню',
+            'gallery-heading': 'Фотографии',
+            'video-heading': 'Видео галерея',
+            'contact-heading': 'Свяжитесь с нами',
+            'get-in-touch': 'Связаться с нами',
+            'location-text': 'Улица Туманяна, Ереван',
+            'hours-text': 'Ежедневно: 11:00 – 23:00',
+            'phone-text': '095 711700',
+            'email-text': 'kamancharest@gmail.com',
+            'whatsapp-text': 'Отправить сообщение',
+            'directions-text': 'Получить направление',
+            'footer-text': 'Armat Gastro Group LLC | Ресторан Каманча © 2025 | Ереван, Армения',
+            'reservation-title': 'Забронировать столик',
+            'reservation-success': 'Бронирование отправлено! Ресторан сообщит вам о подтверждении или отказе.',
+            'login-error': 'Неверные учетные данные',
+            'rezx-note': 'Процесс бронирования осуществляется через Rezx CRM.'
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Header scroll effect
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const hiddenElements = document.querySelectorAll('.hidden');
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        hiddenElements.forEach(el => observer.observe(el));
+
+        // Add plus symbol to phone number
+        validatePhoneNumber();
+
+        // Form submission fallback
+        document.getElementById('reservationFormContent').addEventListener('submit', submitReservation);
+    });
+
+    function changeLanguage(lang) {
+        currentLanguage = lang;
+        for (const [key, value] of Object.entries(translations[lang])) {
+            const element = document.getElementById(key);
+            if (element) element.textContent = value;
+        }
+    }
+
+    function toggleDarkMode() {
+        const isDarkMode = document.getElementById('darkModeSwitch').checked;
+        document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+        const label = document.querySelector('.dark-mode-label i');
+        if (label) {
+            label.className = isDarkMode ? 'fas fa-moon' : 'fas fa-sun';
+        }
+    }
+
+    function validatePhoneNumber() {
+        const phoneInput = document.getElementById("phoneNumber");
+
+        phoneInput.addEventListener("input", () => {
+            // If first character is not +, add it
+            if (!phoneInput.value.startsWith("+")) {
+                phoneInput.value = "+" + phoneInput.value.replace(/\D/g, '');
+            } else {
+                // Allow only digits after the +
+                phoneInput.value = "+" + phoneInput.value.slice(1).replace(/\D/g, '');
+            }
+        });
+
+        phoneInput.addEventListener("keydown", (e) => {
+            // Prevent deleting the +
+            if ((phoneInput.selectionStart <= 1) && (e.key === "Backspace" || e.key === "Delete")) {
+                e.preventDefault();
+            }
+        });
+    }
+
+    // function setMinDateTime() {
+    //     const now = new Date();
+    //     // Format to yyyy-MM-ddTHH:mm for input
+    //     const pad = n => n.toString().padStart(2, '0');
+    //     const minDateTime = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    //     document.getElementById('datetime').setAttribute('min', minDateTime);
+    // }
+
+    function showReservationForm() {
+        document.getElementById('reservationForm').style.display = 'block';
+        document.getElementById('reservationFormContent').style.display = 'block';
+        document.getElementById('reservationSuccessMsg').style.display = 'none';
+        document.getElementById('rezx-note').textContent = translations[currentLanguage]['rezx-note'];
+        // setMinDateTime();
+
+        document.body.style.overflow = 'hidden';
+    }
+
+    function checkIsDefaultShowForm() {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("form");
+        if(name) {
+            showReservationForm();
+        }
+    }
+    checkIsDefaultShowForm();
+
+    function hideReservationForm() {
+        document.getElementById('reservationForm').style.display = 'none';
+        
+        document.body.style.overflow = '';
+    }
+
+    async function submitReservation(event) {
+        event.preventDefault();
+        try {
+            const customerName = document.getElementById('customerName').value.trim();
+            let email = document.getElementById('email').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            const selectedDatetime = document.getElementById('datetime').value;
+            const guestQty = document.getElementById('guestQty').value;
+
+            // Create a Date object in local time
+            const localDate = new Date(selectedDatetime + ':00.000Z');
+            // Add 5 minutes
+            localDate.setMinutes(localDate.getMinutes());
+            const datetime = localDate.toISOString();
+            
+
+            // International phone validation: +CountryCodeNumber or +CountryCode Number
+            const phonePattern = /^\+\d{1,3}\s?\d{6,14}$/;
+            if (!phonePattern.test(phoneNumber)) {
+                alert('Please enter the phone number in the international format: +CountryCodeNumber (e.g. +37494900905 or +1 5551234567)');
+                return;
+            }
+
+            if (!customerName || !phoneNumber || !datetime || !guestQty) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Check if email is empty
+            if(email === "") {
+                email = null;
+            }
+
+            // Prevent reservation in the past
+            const now = new Date();
+            const selectedDate = new Date(datetime);
+            if (selectedDate < now) {
+                alert('You cannot make a reservation in the past.');
+                return;
+            }
+
+            ////// to convert to UTC, removing localtimezone, for exaple in Armenia it's a 4 hours
+            const localtimeZone = ((new Date().getTimezoneOffset() / 60) * -1).toString();
+            const date = new Date(datetime);
+            const dateTemp = new Date(date.getTime() - 4 * 60 * 60 * 1000);
+            const fromDate = dateTemp.toISOString();
+
+            const reservation = {
+                customerName: customerName,
+                phoneNumber: phoneNumber,
+                email: email,
+                fromDate: fromDate,
+                guestQty: parseInt(guestQty),
+            };
+
+            // API endpoint URL
+            const apiUrl = 'https://kamancharezapi.rezx.am/api/forward'; // Replace with the actual API URL  // prod
+            // const apiUrl = 'https://kamancharezx.innline.am/api/forward'; // Replace with the actual API URL    // test
+            
+
+            try {
+                // Disable submit button
+                disableSubmitBtn(true);
+
+                // Post the data to the API
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(reservation) // Serialize data to JSON
+                });
+
+                if (response.ok) {
+                    // Show reservation requested message in the correct language
+                    document.getElementById('reservationFormContent').style.display = 'none';
+                    const msg = document.getElementById('reservationSuccessMsg');
+                    msg.textContent = translations[currentLanguage]['reservation-success'];
+                    msg.style.display = 'block';
+
+                    disableSubmitBtn(false);
+                } else {
+                    // Handle failure
+                    const error = await response.text();
+                    console.error('Error:', error);
+                    alert('Failed to submit the reservation. Please try again.');
+                    disableSubmitBtn(false);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the reservation.');
+                disableSubmitBtn(false);
+            }
+
+            // Do not reset or hide the popup immediately, let user see the message
+        } catch (error) {
+            alert('An error occurred while submitting the reservation. Please try again.');
+        }
+    }
+
+    function disableSubmitBtn(isDisabled) {
+        const sumbitButton = document.getElementById('submit-button');
+        
+        if (sumbitButton && isDisabled) {
+            sumbitButton.disabled = true;
+            sumbitButton.style.opacity = '0.5';
+        }
+        if (sumbitButton && !isDisabled) {
+            sumbitButton.disabled = false;
+            sumbitButton.style.opacity = '1';
+        }
+    }
+
+    // flatpickr
+
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    // Function to round time to nearest 5 minutes
+    function roundToNearest5(date) {
+        const minutes = date.getMinutes();
+        const remainder = minutes % 5;
+        const roundedMinutes = remainder < 3 ? 
+        minutes - remainder : 
+        minutes + (5 - remainder);
+        
+        const newDate = new Date(date);
+        newDate.setMinutes(roundedMinutes);
+        newDate.setSeconds(0);
+        newDate.setMilliseconds(0);
+        
+        return newDate;
+    }
+
+    // Set now rounded to nearest 5 minutes as default
+    const nowRounded = roundToNearest5(new Date());
+    // Add 5 minutes if rounded time is in the past (e.g., if it's 19:12, rounds to 19:15)
+    if (nowRounded <= new Date()) {
+        nowRounded.setMinutes(nowRounded.getMinutes() + 5);
+    }
+
+    ////// checking is nowRounded is not in the working hours range, setting current time to timeFrom 
+    let currentTime = `${pad(nowRounded.getHours())}:${pad(nowRounded.getMinutes())}`;
+    if (!isTimeInRange(currentTime, timeFrom, timeTo)) {
+        nowRounded.setHours(timeFrom.split(':')[0])
+        nowRounded.setMinutes(timeFrom.split(':')[1])
+    }     
+
+    flatpickr("#datetime", {
+        enableTime: true,
+        time_24hr: true,
+        dateFormat: "Y-m-d H:i",
+        minDate: "today",
+        defaultDate: nowRounded, // default time = now rounded to nearest 5 min
+        allowInput: false,
+        clickOpens: true,
+        disableMobile: true,
+
+        onOpen: function(selectedDates, dateStr, instance) {
+            // prevent typing in hour/minute fields
+            const timeInputs = instance.calendarContainer.querySelectorAll(".flatpickr-time input");
+            timeInputs.forEach(input => input.setAttribute("readonly", "readonly"));
+
+            const selectedDate = instance.selectedDates[0] || new Date();
+            const now = new Date();
+            const nowRounded = roundToNearest5(now);
+            if (nowRounded <= now) {
+                nowRounded.setMinutes(nowRounded.getMinutes() + 5);
+            }
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            const isToday = selectedDate.toDateString() === today.toDateString();
+
+            if (isToday) {
+                const minTimeStr = pad(nowRounded.getHours()) + ":" + pad(nowRounded.getMinutes());                
+                // instance.set("minTime", minTimeStr);
+
+                instance.set("minTime", isTimeInRange(minTimeStr, timeFrom, timeTo) ? minTimeStr : timeFrom);
+                instance.set("maxTime", timeTo);
+            } else {
+                // instance.set("minTime", "00:00");
+
+                instance.set("minTime", timeFrom);
+                instance.set("maxTime", timeTo);
+            }
+        },
+
+        onChange: function(selectedDates, dateStr, instance) {
+            const selectedDate = selectedDates[0];
+            const now = new Date();
+            const nowRounded = roundToNearest5(now);
+            if (nowRounded <= now) {
+                nowRounded.setMinutes(nowRounded.getMinutes() + 5);
+            }
+
+            const isToday = selectedDate.toDateString() === (new Date()).toDateString();
+
+            if (isToday) {
+                const minTimeStr = pad(nowRounded.getHours()) + ":" + pad(nowRounded.getMinutes());
+                // instance.set("minTime", minTimeStr);
+
+                instance.set("minTime", isTimeInRange(minTimeStr, timeFrom, timeTo) ? minTimeStr : timeFrom);
+                instance.set("maxTime", timeTo);
+            } else {
+                // instance.set("minTime", "00:00");
+
+                instance.set("minTime", timeFrom);
+                instance.set("maxTime", timeTo);
+            }
+        }
+    });
+
+    function isTimeInRange(currentTime, startTime, endTime) {
+        const today = new Date().toISOString().split('T')[0]; // e.g. "2025-07-30"
+
+        const time = new Date(`${today}T${currentTime}:00`);
+        const start = new Date(`${today}T${startTime}:00`);
+        const end = new Date(`${today}T${endTime}:00`);
+
+        return time >= start && time <= end;
+    }
+
+    /////// check if query params has reservation property, open reservation popup
+    const params = new URLSearchParams(window.location.search);
+    if (JSON.parse(params.get('openreservation')) ) {
+        showReservationForm();
+    } 
+
+</script>
+
+</body>
+</html>
+
+

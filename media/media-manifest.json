@@ -1,0 +1,543 @@
+{
+  "official_site": "https://kamancharest.com/",
+  "assets": [
+    {
+      "file": "location.jpg",
+      "source": "https://kamancharest.com/images/location.jpg",
+      "bytes": 358705,
+      "type": "image",
+      "content": "Exterior entrance and pedestrian street, trees and warm lights",
+      "width": 1350,
+      "height": 1350,
+      "sha256": "39e27cffa1b8a14cae1c803e9c9f08e9a72c8fc1b7ad3023997a4c492ab80ccb",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/location.jpg"
+    },
+    {
+      "file": "music.jpg",
+      "source": "https://kamancharest.com/images/music.jpg",
+      "bytes": 223555,
+      "type": "image",
+      "content": "Live vocalists inside the restaurant",
+      "width": 1440,
+      "height": 1440,
+      "sha256": "8cf56226895662676059ae0d0511855349a5757e571579d866024a42040d9ddd",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/music.jpg"
+    },
+    {
+      "file": "interior.jpg",
+      "source": "https://kamancharest.com/images/interior.jpg",
+      "bytes": 96579,
+      "type": "image",
+      "content": "Carpet-covered interior wall, restaurant sign, warm chandelier and seating; embedded logo",
+      "width": 960,
+      "height": 706,
+      "sha256": "8985c5f0ade58314d792b7f084032a35f1b6bcbdcc41b98c6d888482595fbe3a",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/interior.jpg"
+    },
+    {
+      "file": "img1.jpg",
+      "source": "https://kamancharest.com/images/img1.jpg",
+      "bytes": 437926,
+      "type": "image",
+      "content": "Guests in traditional dress with wine",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "ff51f46dc54dbebc26825261881e7f77384fc5cf233833a5ffeee2f99cf276d8",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img1.jpg"
+    },
+    {
+      "file": "img2.jpg",
+      "source": "https://kamancharest.com/images/img2.jpg",
+      "bytes": 627192,
+      "type": "image",
+      "content": "Restaurant service and large food platter among guests",
+      "width": 1500,
+      "height": 1614,
+      "sha256": "a2261a3139d56fc09c6a181198616f2320cf0f056230e6256abf61917ba52e59",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img2.jpg"
+    },
+    {
+      "file": "img3.jpg",
+      "source": "https://kamancharest.com/images/img3.jpg",
+      "bytes": 165849,
+      "type": "image",
+      "content": "Guests at a long banquet table",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "20ed105bc7edc14f53fc381697d36883685ee20847107275a51ce685d873f062",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img3.jpg"
+    },
+    {
+      "file": "img4.jpg",
+      "source": "https://kamancharest.com/images/img4.jpg",
+      "bytes": 340347,
+      "type": "image",
+      "content": "Grilled meat platter with flame; embedded logo",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "9734d99840b325c3abdfd23bdad728148fc22d93956f5e46f1c0078ed079edca",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img4.jpg"
+    },
+    {
+      "file": "img5.jpg",
+      "source": "https://kamancharest.com/images/img5.jpg",
+      "bytes": 212361,
+      "type": "image",
+      "content": "Restaurant staff group against carpet wall",
+      "width": 1280,
+      "height": 853,
+      "sha256": "81ddde366bff61f32c44160276838c8db478629b0ccf26a90f3729a4fed32cf0",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img5.jpg"
+    },
+    {
+      "file": "img6.jpg",
+      "source": "https://kamancharest.com/images/img6.jpg",
+      "bytes": 157637,
+      "type": "image",
+      "content": "Empty set banquet table, warm interior and glassware",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "ab2b288a882724788d4afe80162975dad3c8916b5ba126ed2df307f7874a2610",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img6.jpg"
+    },
+    {
+      "file": "img7.jpg",
+      "source": "https://kamancharest.com/images/img7.jpg",
+      "bytes": 745073,
+      "type": "image",
+      "content": "Overhead food spread, wine and dining table",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "cedaa8a182f53fedd24a10b6fcbca5bc17c69300759fc2fbb4d7d06322c93fd4",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img7.jpg"
+    },
+    {
+      "file": "img8.jpg",
+      "source": "https://kamancharest.com/images/img8.jpg",
+      "bytes": 238278,
+      "type": "image",
+      "content": "Cooked meat presentation with vegetables on dark background",
+      "width": 1440,
+      "height": 1795,
+      "sha256": "42e33f852c4b14e9e49fb9807e5d3b1f40f4be0a37dd046c72b69cdebd6a79aa",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img8.jpg"
+    },
+    {
+      "file": "img9.jpg",
+      "source": "https://kamancharest.com/images/img9.jpg",
+      "bytes": 555976,
+      "type": "image",
+      "content": "Kamancha string instrument on patterned carpet; embedded logo; original site hero background",
+      "width": 1823,
+      "height": 1823,
+      "sha256": "84d8e023a4bc7ee87c82051a8b02ad873180de3bb35b630239c6280bbdf82014",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img9.jpg"
+    },
+    {
+      "file": "img10.jpg",
+      "source": "https://kamancharest.com/images/img10.jpg",
+      "bytes": 226025,
+      "type": "image",
+      "content": "Live seated music ensemble",
+      "width": 1440,
+      "height": 1440,
+      "sha256": "847ca80badfec6c9116f657fa22f87b10eeab0db87ba56a7cc84981e90ab43a7",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img10.jpg"
+    },
+    {
+      "file": "img11.jpg",
+      "source": "https://kamancharest.com/images/img11.jpg",
+      "bytes": 319674,
+      "type": "image",
+      "content": "Overhead colorful dishes on dining table",
+      "width": 1440,
+      "height": 1440,
+      "sha256": "6f8f6f5701d6686d417ed3637f0703fa894b945c2734cffa8e940403a9639938",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img11.jpg"
+    },
+    {
+      "file": "img12.jpg",
+      "source": "https://kamancharest.com/images/img12.jpg",
+      "bytes": 262803,
+      "type": "image",
+      "content": "Guests clinking red wine glasses",
+      "width": 1755,
+      "height": 1755,
+      "sha256": "d78ed58da08ba44ae2ee1d7c1cd1eff2b5f51f3214f5eace9aff70f1f840d68c",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/img12.jpg"
+    },
+    {
+      "file": "video1.mp4",
+      "source": "https://kamancharest.com/videos/video1.mp4",
+      "bytes": 5007513,
+      "type": "video",
+      "content": "Vertical live vocal performance with musicians and guests; text overlay. Sampled frames show performance, not a clearly identifiable dance sequence",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 30.0,
+      "poster": "video1-poster.jpg",
+      "sha256": "aaad9e43cb8c72f618a19e70fe034434aa608be243ad3afc2bfb63883cccfb9c",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video1.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video1-poster.jpg"
+    },
+    {
+      "file": "video2.mp4",
+      "source": "https://kamancharest.com/videos/video2.mp4",
+      "bytes": 6812037,
+      "type": "video",
+      "content": "Vertical food preparation/service, cheese and pasta",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 27.33,
+      "poster": "video2-poster.jpg",
+      "sha256": "de78b49339534152649b57e7eb89742e2854a5beead654111437315e9816be2f",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video2.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video2-poster.jpg"
+    },
+    {
+      "file": "video3.mp4",
+      "source": "https://kamancharest.com/videos/video3.mp4",
+      "bytes": 3657637,
+      "type": "video",
+      "content": "Landscape promotional montage: kamancha player, dining guests, interior, exterior and final logo",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 17.96,
+      "poster": "video3-poster.jpg",
+      "sha256": "7be6adcd900a7c82610dd8d2bda975551adc0bc2b849250b59a973a5cb4a7feb",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video3.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video3-poster.jpg"
+    },
+    {
+      "file": "video4.mp4",
+      "source": "https://kamancharest.com/videos/video4.mp4",
+      "bytes": 4941382,
+      "type": "video",
+      "content": "Vertical guests dining, dishes, family celebration and restaurant interior",
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 22.71,
+      "poster": "video4-poster.jpg",
+      "sha256": "f19e3ee28fa311c56303b55777156f39f82422f6fe137b389403f3a2fae718f7",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video4.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video4-poster.jpg"
+    },
+    {
+      "file": "video5.mp4",
+      "source": "https://kamancharest.com/videos/video5.mp4",
+      "bytes": 1428036,
+      "type": "video",
+      "content": "Landscape close-up food, meat and vegetables",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 9.56,
+      "poster": "video5-poster.jpg",
+      "sha256": "34186c68270a6dbc154d44679f31d762989d391d6cb10117ae92763ff044f5f8",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video5.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video5-poster.jpg"
+    },
+    {
+      "file": "video6.mp4",
+      "source": "https://kamancharest.com/videos/video6.mp4",
+      "bytes": 4514241,
+      "type": "video",
+      "content": "Wide baking and dough preparation",
+      "width": 1280,
+      "height": 566,
+      "duration_seconds": 31.68,
+      "poster": "video6-poster.jpg",
+      "sha256": "e603c92f6ded61d7c26cd2242e960d00b202aa7f8f41eeb2eeb3f3fdb5a669e3",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video6.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video6-poster.jpg"
+    },
+    {
+      "file": "video7.mp4",
+      "source": "https://kamancharest.com/videos/video7.mp4",
+      "bytes": 1432878,
+      "type": "video",
+      "content": "Landscape close-up pasta and meat dish",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 10.16,
+      "poster": "video7-poster.jpg",
+      "sha256": "31bc51ecd4264eeef1e3aa43e8c01c5ea905397e1c14c5cc2ebc343079b5acbe",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video7.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video7-poster.jpg"
+    },
+    {
+      "file": "video8.mp4",
+      "source": "https://kamancharest.com/videos/video8.mp4",
+      "bytes": 1162223,
+      "type": "video",
+      "content": "Landscape layered cake close-up",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 8.96,
+      "poster": "video8-poster.jpg",
+      "sha256": "778610d861021fd06d1c3defe308859a6c35c49b2335761631edee83ee565861",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video8.mp4",
+      "poster_absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/video8-poster.jpg"
+    },
+    {
+      "file": "dish-09-pghpeghani.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 9,
+      "xref": 36,
+      "type": "image",
+      "content": "pghpeghani",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 3663,
+      "original_height": 4579,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 350778,
+      "sha256": "6215f1d8a679ae7db3d00e73023c021afab1c147b97bdc150b74b1d96a2781a9",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-09-pghpeghani.webp"
+    },
+    {
+      "file": "dish-11-crispy-salad.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 11,
+      "xref": 45,
+      "type": "image",
+      "content": "crispy-salad",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2611,
+      "original_height": 3264,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 265206,
+      "sha256": "744d8d1168d5a9eb31c6e86b985bea25e17d3bd6d69d674cd7a2d879db76f029",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-11-crispy-salad.webp"
+    },
+    {
+      "file": "dish-15-pide-two-meat.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 15,
+      "xref": 64,
+      "type": "image",
+      "content": "pide-two-meat",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 3373,
+      "original_height": 4217,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 260416,
+      "sha256": "e7f496c47b5d271ade9970f87d24ebf2a41d1e9273492c9ad17b11e3013d8052",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-15-pide-two-meat.webp"
+    },
+    {
+      "file": "dish-17-tolma-grape-leaves.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 17,
+      "xref": 73,
+      "type": "image",
+      "content": "tolma-grape-leaves",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2126,
+      "original_height": 3188,
+      "width": 1200,
+      "height": 1800,
+      "bytes": 575146,
+      "sha256": "330b1db56084dff9c26135bb5f77bd569e487b0bf640d23829eca2a158284f6b",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-17-tolma-grape-leaves.webp"
+    },
+    {
+      "file": "dish-19-panrkhash.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 19,
+      "xref": 83,
+      "type": "image",
+      "content": "panrkhash",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 3500,
+      "original_height": 4374,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 576948,
+      "sha256": "3b170c0cceecd80cff3864a2014f44180c1fe420b579fffc725fad91d1e31a93",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-19-panrkhash.webp"
+    },
+    {
+      "file": "dish-21-syunik-khashntur.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 21,
+      "xref": 92,
+      "type": "image",
+      "content": "syunik-khashntur",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2371,
+      "original_height": 2963,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 207896,
+      "sha256": "d7957392ef2e497202d35971a380a23f53576e7d42206ddb04e1fc5a3e8535f1",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-21-syunik-khashntur.webp"
+    },
+    {
+      "file": "dish-27-lamb-shoulder.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 27,
+      "xref": 131,
+      "type": "image",
+      "content": "lamb-shoulder",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2369,
+      "original_height": 2961,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 401822,
+      "sha256": "709adfe2604715bad20a41874ce5e10dbc4e33810acb452115574b7c5d431c96",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-27-lamb-shoulder.webp"
+    },
+    {
+      "file": "dish-29-bbq-set-big.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 29,
+      "xref": 140,
+      "type": "image",
+      "content": "bbq-set-big",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2372,
+      "original_height": 2965,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 548836,
+      "sha256": "c608bae66e60ed135b0abe6fe3fead2081a91c313802cb60c9ea6a2fbb42a399",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-29-bbq-set-big.webp"
+    },
+    {
+      "file": "dish-31-kebab.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 31,
+      "xref": 151,
+      "type": "image",
+      "content": "kebab",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2370,
+      "original_height": 2962,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 644272,
+      "sha256": "c1658454f5985c1a9c9f0be27dbbc0ca62b1c033f9c6fa0b5687e46d20095dc5",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-31-kebab.webp"
+    },
+    {
+      "file": "dish-37-gata.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 37,
+      "xref": 179,
+      "type": "image",
+      "content": "gata",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2634,
+      "original_height": 3292,
+      "width": 1440,
+      "height": 1800,
+      "bytes": 474978,
+      "sha256": "40136db801267f46ee390e38581aa3135856503e8b5d79793639b205c7058953",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-37-gata.webp"
+    },
+    {
+      "file": "dish-39-menu-photo.webp",
+      "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+      "page_1_based": 39,
+      "xref": 190,
+      "type": "image",
+      "content": "Cocktail in stemmed glass with lime and splash, black background; exact cocktail name not present on PDF page",
+      "extraction": "embedded raster without PDF text overlays",
+      "original_width": 2391,
+      "original_height": 3586,
+      "width": 1200,
+      "height": 1800,
+      "bytes": 91878,
+      "sha256": "a84e6818a2a5afc6012161d4aa8f08ea0a7e0d2dd43d2c18cd9f388cb6e307d4",
+      "absolute_path": "C:/Users/Ian/.zcode/workspace/default/kamancha/public/media/dish-39-menu-photo.webp"
+    }
+  ],
+  "menu_pdf": {
+    "file": "../menu.pdf",
+    "source": "C:\\Users\\Ian\\Downloads\\Kamanchamenu.pdf",
+    "pages": 44,
+    "bytes": 10779572
+  },
+  "video_total_bytes": 28955947,
+  "recommendations": {
+    "hero_video": "video3.mp4",
+    "hero_still": "img9.jpg",
+    "interior": [
+      "img6.jpg",
+      "interior.jpg"
+    ],
+    "dancing": {
+      "candidate": "video1.mp4",
+      "verified_dance_clip": false,
+      "note": "All eight linked MP4 downloaded. Frame inspection identifies live vocal performance, not verified dancing; do not describe it as a dedicated dance clip."
+    },
+    "food_hero": [
+      "dish-27-lamb-shoulder.webp",
+      "dish-29-bbq-set-big.webp"
+    ]
+  },
+  "inspection": {
+    "method": "Local contact sheets: all photos and eight video posters; five time samples each for videos 1, 3, 4",
+    "contact_sheets": [
+      "contact-photos.jpg",
+      "contact-videos.jpg",
+      "contact-video-scenes.jpg"
+    ],
+    "pdf_extraction": "11 embedded original photographs, no PDF text overlays, max edge 1800px, WebP quality 88",
+    "video_budget_bytes": 120000000,
+    "all_linked_mp4_downloaded": true
+  },
+  "auxiliary_files": [
+    {
+      "file": "contact-photos.jpg",
+      "bytes": 255295
+    },
+    {
+      "file": "contact-video-scenes.jpg",
+      "bytes": 102236
+    },
+    {
+      "file": "contact-videos.jpg",
+      "bytes": 59015
+    },
+    {
+      "file": "official-source.html",
+      "bytes": 58539
+    },
+    {
+      "file": "video1-poster.jpg",
+      "bytes": 224317
+    },
+    {
+      "file": "video2-poster.jpg",
+      "bytes": 190186
+    },
+    {
+      "file": "video3-poster.jpg",
+      "bytes": 142341
+    },
+    {
+      "file": "video4-poster.jpg",
+      "bytes": 220888
+    },
+    {
+      "file": "video5-poster.jpg",
+      "bytes": 200580
+    },
+    {
+      "file": "video6-poster.jpg",
+      "bytes": 116991
+    },
+    {
+      "file": "video7-poster.jpg",
+      "bytes": 192488
+    },
+    {
+      "file": "video8-poster.jpg",
+      "bytes": 246006
+    }
+  ]
+}
